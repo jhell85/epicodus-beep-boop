@@ -17,23 +17,21 @@ $(document).ready(function() {
     convertedArray = numbers.map(function(number) {
       splitCompare(number);
     });
-    console.log(convertedArray)
+    console.log(convertedArray);
   }
   function splitCompare(number) {
-    var stringNumber = String(number).split("");
-    for (let i = 0; i < stringNumber.length; i++) {
-      if (stringNumber[i] === "3") {
+    var stringNumberArray = String(number).split("");
+    var stringNumber = String(number);
+    for (let i = 0; i < stringNumberArray.length; i++) {
+      if (stringNumberArray[i] === "3") {
         stringNumber = "I'm sorry, Dave. I'm afraid I can't do that.";
-        console.log(stringNumber);
-        break;
-      } else if (stringNumber[i] === "2") {
+        return stringNumber;
+      } else if (stringNumberArray[i] === "2") {
         stringNumber = "Boop";
-        console.log(stringNumber);
-        break;
-      } else if (stringNumber[i] === "1") {
+        return stringNumber;
+      } else if (stringNumberArray[i] === "1") {
         stringNumber = "Beep";
-        console.log(stringNumber);
-        break;
+        return stringNumber;
       }
     }
   }
