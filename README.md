@@ -8,6 +8,19 @@
 
 _{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
 
+## Specs
+
+Behavior | input | output
+---------|-------|--------
+The program returns a range of numbers from the users inputted number. | 4 | "0, 1, 2, 3, 4"
+
+program will replace all numbers containing a 1 with "Beep" | 1 | "0, Beep"
+Program will replace all numbers containing a 2 with "Boop" | 2 | "0, Beep, Boop"
+program will replace all numbers containing a 3 with "I'm sorry {User input} but I'm afraid I can't do that" | 3 | "0, Beep, Boop, I'm sorry {User input} but I'm afraid I can't do that"
+
+* _These rules are written in order of precedence_ 
+  * 12 returns "Boop"
+  * 23 returns "I'm sorry {User input} but I'm afraid I can't do that"
 ## Setup/Installation Requirements
 
 * _This is a great place_
