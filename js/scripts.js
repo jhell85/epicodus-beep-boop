@@ -1,8 +1,15 @@
 $(document).ready(function() {
+
+  // Front end 
   $("#numberForm").submit(function(event) {
     event.preventDefault();
-    console.log("button submit");
     var number = parseInt($("#numberInput").val());
-    console.log(number);
+    arrayCount(number)
   });
+
+  //Backend 
+  function arrayCount(number) {
+    console.log("arrayCount")
+
+  }
 });
