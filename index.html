@@ -5,9 +5,29 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js" ></script>
-    <title></title>
+    <title>Beep Boop Machine</title>
   </head>
   <body>
-
+    <div class="container">
+      <h1 class="text-center">Beep Boop</h1>
+      <hr>
+      <div class="row">
+        <div class="col-6 offset-3">
+            <form>
+                <div class="form-group">
+                  <label for="numberInput">Count to ...</label>
+                  <input type="number" class="form-control" id="NumberInput"  placeholder="Give me a number" value="23">
+                  <small id="text-explain" class="form-text text-muted">Put in a number and watch the machine count</small>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+              </form>
+              <div id="result" class="text-center">
+                Print Here
+              </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
   </body>
 </html>

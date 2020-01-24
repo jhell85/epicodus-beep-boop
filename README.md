@@ -2,7 +2,7 @@
 
 #### _Takes inputted number and returns a range counting to that number_ **01/24/2020**
 
-#### By _**Joshua Hellman**_
+#### By: _**Joshua Hellman**_
 
 ## Description
 
@@ -13,7 +13,6 @@ _This is a program that takes in an number inputted by a user and counts up to t
 Behavior | input | output
 ---------|-------|--------
 The program returns a range of numbers from the users inputted number. | 4 | "0, 1, 2, 3, 4"
-
 program will replace all numbers containing a 1 with "Beep" | 1 | "0, Beep"
 Program will replace all numbers containing a 2 with "Boop" | 2 | "0, Beep, Boop"
 program will replace all numbers containing a 3 with "I'm sorry {User input} but I'm afraid I can't do that" | 3 | "0, Beep, Boop, I'm sorry {User input} but I'm afraid I can't do that"
