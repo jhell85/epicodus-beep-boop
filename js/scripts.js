@@ -15,13 +15,14 @@ $(document).ready(function() {
       numbers.push(counter);
     }
     convertedArray = numbers.map(function(number) {
-      splitCompare(number);
+      return splitCompare(number);
     });
     console.log(convertedArray);
   }
   function splitCompare(number) {
     var stringNumberArray = String(number).split("");
     var stringNumber = String(number);
+    console.log(stringNumber)
     for (let i = 0; i < stringNumberArray.length; i++) {
       if (stringNumberArray[i] === "3") {
         stringNumber = "I'm sorry, Dave. I'm afraid I can't do that.";
@@ -34,5 +35,6 @@ $(document).ready(function() {
         return stringNumber;
       }
     }
+  return stringNumber
   }
 });
