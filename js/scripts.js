@@ -9,14 +9,22 @@ $(document).ready(function() {
   //Backend
   var counter = 0;
   var numbers = [0];
-  
   function addNumber(number) {
-    counter += 1;
+    counter ++;
     numbers.push(counter);
-    console.log(numbers);
     while (number > counter) {
       addNumber(counter);
     }
+    console.log(numbers);
+    for (let i = 0; i < numbers.length; i++) {
+      splitNumber(numbers[i])
+      // const element = array[i];
+    }
+    function splitNumber(number){
+      console.log(String(number))
+      var stringNumber = String(number).split("")
+      console.log(stringNumber)
+    }
   }
-  
+
 });
