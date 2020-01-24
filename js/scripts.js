@@ -35,4 +35,7 @@ $(document).ready(function() {
     }
     return stringNumber;
   }
+  function printToDom(mutatedArray){
+    $("#result").append(mutatedArray)
+  }
 });
