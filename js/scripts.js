@@ -1,15 +1,22 @@
 $(document).ready(function() {
-
-  // Front end 
+  // Front end
   $("#numberForm").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("#numberInput").val());
-    arrayCount(number)
+    addNumber(number);
   });
 
-  //Backend 
-  function arrayCount(number) {
-    console.log("arrayCount")
-
+  //Backend
+  var counter = 0;
+  var numbers = [0];
+  
+  function addNumber(number) {
+    counter += 1;
+    numbers.push(counter);
+    console.log(numbers);
+    while (number > counter) {
+      addNumber(counter);
+    }
   }
+  
 });
