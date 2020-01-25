@@ -10,6 +10,8 @@ $(document).ready(function() {
   var counter = 0;
   var numbers = [0];
   function submitDocument(number) {
+    numbers = [0];
+    counter = [0]
     addNumber(number);
     convertedArray = numbers.map(function(number) {
       return splitCompare(number);
@@ -39,13 +41,12 @@ $(document).ready(function() {
     return stringNumber;
   }
   function printToDom(mutatedArray) {
-    console.log("print to dom");
     $("#result-div").empty();
     $(".result-list").remove();
     $("#result-div").removeClass("text-center");
-    $("#result-div").append("<ul class='result-list'></ul>");
+    $("#result-div").append("<ol class='result-list' start='0'></ol>");
     mutatedArray.forEach(number => {
-      $("#result-div ul").append("<li>" + number + "</li>");
+      $("#result-div ol").append("<li>" + number + "</li>");
     });
   }
 });
