@@ -39,11 +39,13 @@ $(document).ready(function() {
     return stringNumber;
   }
   function printToDom(mutatedArray) {
-   
-    $("#result").empty();
+    console.log("print to dom");
+    $("#result-div").empty();
+    $(".result-list").remove();
+    $("#result-div").removeClass("text-center");
+    $("#result-div").append("<ul class='result-list'></ul>");
     mutatedArray.forEach(number => {
-      $("#result").append("<li>" + number + "</li>");
-      
+      $("#result-div ul").append("<li>" + number + "</li>");
     });
   }
 });
