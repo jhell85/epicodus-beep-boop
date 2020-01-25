@@ -3,10 +3,17 @@ $(document).ready(function() {
   $("#numberForm").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("#numberInput").val());
-    addNumber(number);
+    submitDocument(number);
   });
 
   //Back end
+  function submitDocument(number) {
+    var numberArray = addNumber(number);
+    convertedArray = numbers.map(function(number) {
+      return splitCompare(number);
+    });
+    printToDom(convertedArray);
+  }
   var counter = 0;
   var numbers = [0];
   function addNumber(number) {
@@ -14,15 +21,11 @@ $(document).ready(function() {
       counter++;
       numbers.push(counter);
     }
-    convertedArray = numbers.map(function(number) {
-      return splitCompare(number);
-    });
-    console.log(convertedArray);
+    return numbers;
   }
   function splitCompare(number) {
     var stringNumberArray = String(number).split("");
     var stringNumber = String(number);
-    console.log(stringNumber);
     for (let i = 0; i < stringNumberArray.length; i++) {
       if (stringNumberArray[i] === "3") {
         stringNumber = "I'm sorry, Dave. I'm afraid I can't do that.";
@@ -35,7 +38,7 @@ $(document).ready(function() {
     }
     return stringNumber;
   }
-  function printToDom(mutatedArray){
-    $("#result").append(mutatedArray)
+  function printToDom(mutatedArray) {
+    $("#result").append(mutatedArray);
   }
 });
