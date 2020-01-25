@@ -7,15 +7,15 @@ $(document).ready(function() {
   });
 
   //Back end
+  var counter = 0;
+  var numbers = [0];
   function submitDocument(number) {
-    var numberArray = addNumber(number);
+    addNumber(number);
     convertedArray = numbers.map(function(number) {
       return splitCompare(number);
     });
     printToDom(convertedArray);
   }
-  var counter = 0;
-  var numbers = [0];
   function addNumber(number) {
     while (number > counter) {
       counter++;
@@ -39,6 +39,11 @@ $(document).ready(function() {
     return stringNumber;
   }
   function printToDom(mutatedArray) {
-    $("#result").append(mutatedArray);
+   
+    $("#result").empty();
+    mutatedArray.forEach(number => {
+      $("#result").append("<li>" + number + "</li>");
+      
+    });
   }
 });
