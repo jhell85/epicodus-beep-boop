@@ -11,7 +11,7 @@ $(document).ready(function() {
   var numbers = [0];
   function submitDocument(number) {
     numbers = [0];
-    counter = [0]
+    counter = [0];
     addNumber(number);
     convertedArray = numbers.map(function(number) {
       return splitCompare(number);
@@ -41,12 +41,55 @@ $(document).ready(function() {
     return stringNumber;
   }
   function printToDom(mutatedArray) {
-    $("#result-div").empty();
     $(".result-list").remove();
-    $("#result-div").removeClass("text-center");
-    $("#result-div").append("<ol class='result-list' start='0'></ol>");
-    mutatedArray.forEach(number => {
-      $("#result-div ol").append("<li>" + number + "</li>");
-    });
+    divResults = Math.ceil(counter / 25);
+    divCounter = 1;
+    while (divResults > divCounter) {
+      console.log("divResults : "+ divResults +" divCounter : "+ divCounter)
+      if (counter <= 25) {
+        console.log("if Ran");
+        $("#result-div").append(
+          "<ol class='result-list col-3'id='results0' start='" + 0 + "'></ol>"
+        );
+        for (let i = 0; i <= counter; i++) {
+          $("#results0").append("<li>" + mutatedArray[i] + "</li>");
+        }
+      } else if (divCounter < divResults) {
+        if (divCounter === 1 ){
+          var indexStart = divCounter;
+        } else {
+          var indexStart = divCounter * 25;
+        }
+        console.log("I ran");
+        $("#result-div").append(
+          "<ol class='result-list col-3'id='results" +
+            indexStart +
+            "' start='" +
+            indexStart +
+            "'></ol>"
+        );
+        for (let i = indexStart; i <= indexStart + 25; i++) {
+          $("#results" + indexStart + "").append(
+            "<li>" + mutatedArray[i] + "</li>"
+          );
+        }
+      } else {
+        var indexStart = divCounter * 25;
+        console.log("I ran");
+        $("#result-div").append(
+          "<ol class='result-list col-3'id='results" +
+            indexStart +
+            "' start='" +
+            indexStart +
+            "'></ol>"
+        );
+        for (let i = indexStart; i <= counter + 24; i++) {
+          $("#results" + indexStart + "").append(
+            "<li>" + mutatedArray[i] + "</li>"
+          );
+        }
+      }
+      divCounter++;
+    }
   }
 });

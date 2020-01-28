@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js" ></script>
-    <title>Beep Boop Machine</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="text-center">Beep Boop</h1>
-      <hr>
-      <div class="row">
-        <div class="col-6 offset-3">
-            <form id="numberForm">
-                <div class="form-group">
-                  <label for="numberInput">Count to ...</label>
-                  <input type="number" class="form-control" id="numberInput"  placeholder="Give me a number" value="3">
-                  <small id="text-explain" class="form-text text-muted">Put in a number and watch the machine count</small>
-                </div>
-                <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-              </form>
-              <div id="result-div" class="text-center">
-                Print Here
-              </div>
-        </div>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Beep Boop Machine</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">Beep Boop</h1>
+    <hr>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <form id="numberForm">
+          <div class="form-group">
+            <label for="numberInput">Count to ...</label>
+            <input type="number" class="form-control" id="numberInput" placeholder="Give me a number" value="3">
+            <small id="text-explain" class="form-text text-muted">Put in a number and watch the machine count</small>
+          </div>
+          <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </form>
+      </div>
+      <div class="container">
+        <div id="result-div" class="row"></div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
-  </body>
+</body>
+
 </html>
