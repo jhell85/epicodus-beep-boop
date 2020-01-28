@@ -7,29 +7,36 @@
     <script src="js/scripts.js" ></script>
     <title>Beep Boop Machine</title>
   </head>
-  <body>
-    <div class="container">
-      <h1 class="text-center">Beep Boop</h1>
+  <body class="start">
+    <div id="startContainer" class="container">
+      <h1 class="text-center">Artificial Intelligence </h1>
       <hr>
       <div class="row">
         <div class="col-6 offset-3">
             <form id="numberForm">
                 <div class="form-group">
                   <label for="numberInput">Count to ...</label>
-                  <input type="number" class="form-control" id="numberInput"  placeholder="Give me a number" value="3">
+                  <input type="number" class="form-control" id="numberInput"  placeholder="Give me a number">
                   <small id="text-explain" class="form-text text-muted">Put in a number and watch the machine count</small>
                 </div>
                 <div class="form-group">
-                  <label for="nameInput">Count to ...</label>
+                  <label for="nameInput">Who to blame when the machine gets an error...</label>
                   <input type="text" class="form-control" id="nameInput"  placeholder="Name">
-                  <small id="text-explain" class="form-text text-muted">leave blank for a pirate name.</small>
+                  
                 </div>
                 <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
               </form>
-              <div id="result-div" class="text-center">
-                Print Here
-              </div>
+             
         </div>
+      </div>
+    </div>
+    <div id="results" class="none container">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-3"><img id="bender1" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fvillains%2Fimages%2F8%2F8f%2FThe_Bender.jpg%2Frevision%2Flatest%3Fcb%3D20180701200006&f=1&nofb=1"></div>
+        <div class="col-3" id="result-div" class="text-center col-3"></div>
+        <div><img id="bender2" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthefurniturerecord.files.wordpress.com%2F2015%2F04%2Fbender2.png&f=1&nofb=1"></div>
+        <div class="col-1"></div>
       </div>
     </div>
   </body>

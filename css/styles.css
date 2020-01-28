@@ -1,4 +1,27 @@
-body {
-  background-color: rgb(63, 36, 3);
-  color: bisque;
+body{
+  background-color: #1C110A;
+  color: #D45113;
+}
+.start{
+  background-image: url(https://wonderfulengineering.com/wp-content/uploads/2013/11/wallpaper_retro_robot.jpg);
+  background-size: auto;
+  color: rgb(65, 88, 103);
+  background-size:cover;
+}
+.none{
+  display: none
+}
+#bender1{
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 25px;
+  border-radius: 5px;
+}
+#bender2{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 25px;
+  border-radius: 5px;
 }

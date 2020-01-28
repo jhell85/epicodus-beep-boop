@@ -14,6 +14,9 @@ $(document).ready(function() {
   function submitDocument(numberInput, name) {
     numbers = [0];
     counter = [0]
+    $("#startContainer").addClass("none")
+    $("#results").removeClass("none")
+    $("body").removeClass("start")
     if (name === ""){
       name = generateName()
     }
@@ -47,7 +50,7 @@ $(document).ready(function() {
   }
   function generateName() {
     var randomNames = ["Nikol Whitebeard", "Charming Deanna Grey", "Cutthroat Anton The Charming", "First Mate Deanna The Stable", "First Mate Travis The Intuitive", "Cap'n Intuitive", "Gracious Brooke The Pirate", "Joss Gingerbeard", "Joss De Portland" ]
-    return randomNames[Math.floor(Math.random() * 11)];
+    return randomNames[Math.floor(Math.random() * 10)];
 
   }
   function printToDom(mutatedArray) {
