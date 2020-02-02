@@ -7,31 +7,40 @@ $(document).ready(function() {
     submitDocument(numberInput, name);
   });
 });
+
+function printToDom(mutatedArray) {
+  $("#result-div").append("<ol class='result-list' start='0'></ol>");
+  mutatedArray.forEach(number => {
+    $("#result-div ol").append("<li>" + number + "</li>");
+  });
+}
 //Back end
 var counter = 0;
 var numbers = [0];
 function submitDocument(numberInput, name) {
-  numbers = [0];
-  counter = [0]
-  $("#startContainer").addClass("none")
-  $("#results").removeClass("none")
-  $("body").removeClass("start")
+  $("#startContainer").addClass("none");
+  $("#results").removeClass("none");
+  $("body").removeClass("start");
   if (name === ""){
-    name = generateName()
+    name = generateName();
   }
-  addNumber(numberInput);
-  convertedArray = numbers.map(function(number) {
+  var numbers = addNumber(numberInput);
+  var convertedArray = numbers.map(function(number) {
     return splitCompare(number, name);
   });
   printToDom(convertedArray);
 }
+
 function addNumber(numberInput) {
+  var counter = 0;
+  var numbers = [0];
   while (numberInput > counter) {
     counter++;
     numbers.push(counter);
   }
   return numbers;
 }
+
 function splitCompare(number, name,) {
   var stringNumberArray = String(number).split("");
   var stringNumber = String(number);
@@ -47,13 +56,8 @@ function splitCompare(number, name,) {
   }
   return stringNumber;
 }
+
 function generateName() {
-  var randomNames = ["Nikol Whitebeard", "Charming Deanna Grey", "Cutthroat Anton The Charming", "First Mate Deanna The Stable", "First Mate Travis The Intuitive", "Cap'n Intuitive", "Gracious Brooke The Pirate", "Joss Gingerbeard", "Joss De Portland" ]
+  var randomNames = ["Nikol Whitebeard", "Charming Deanna Grey", "Cutthroat Anton The Charming", "First Mate Deanna The Stable", "First Mate Travis The Intuitive", "Cap'n Intuitive", "Gracious Brooke The Pirate", "Joss Gingerbeard", "Joss De Portland" ];
   return randomNames[Math.floor(Math.random() * 10)];
-}
-function printToDom(mutatedArray) {
-  $("#result-div").append("<ol class='result-list' start='0'></ol>");
-  mutatedArray.forEach(number => {
-    $("#result-div ol").append("<li>" + number + "</li>");
-  });
 }
