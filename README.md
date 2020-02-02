@@ -34,9 +34,9 @@ _Make sure you have [git version control](https://git-scm.com/downloads) install
 cd desktop
 ```
 
- Mac & linux 
+ **Mac & Linux** 
  ```sh
- cd ~/Desktop
+ cd /Desktop
  ```
 
  3. in terminal type '_git clone https://github.com/jhell85/epicodus-beep-boop.git_ '
@@ -45,11 +45,24 @@ cd desktop
 git clone https://github.com/jhell85/epicodus-beep-boop.git
 ```
 
-4. navigate to the new folder that was created on your desk
-5. select index.html
-6. right click on the file and select _'open with'_
-7. select your browser you choose to view this site in
-8. watch the computer count for you
+4. in terminal type '_cd epicodus-beep-boop_ '
+
+**Mac & Linux**
+```sh
+cd /epicodus-beep-boop
+```
+
+**Windows**
+```sh 
+cd epicodus-beep-boop
+```
+5. in terminal type '_open index.html_'
+
+
+```sh
+  open index.html
+```
+6. enjoy this program and watch the computer count for you
 
 ## Known Bugs
 
